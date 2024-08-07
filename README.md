@@ -1,3 +1,10 @@
+<div align="center">
+
+### _Forked and Modified by DrymarchonShaun_
+
+#### _For use in [DrymarchonShaun/nix-config](https://github.com/DrymarchonShaun/nix-config)_
+
+</div>
 <p align="center" style="color:grey">
 
 ![image](https://github.com/niksingh710/nvix/assets/60490474/89503d51-ca86-4933-872f-3f60c32202a9)
