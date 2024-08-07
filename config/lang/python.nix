@@ -4,7 +4,7 @@
     lsp = {
       servers = {
         ruff.enable = true;
-        ruff-lsp.enable = true;
+      # ruff-lsp.enable = true;
       };
     };
     none-ls = {
