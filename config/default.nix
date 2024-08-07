@@ -7,7 +7,6 @@ in {
     ./autocmd.nix
     ./general.nix
 
-    ./tokyodark.nix
     ./bufferline.nix
     ./lualine.nix
     ./ufo.nix
@@ -50,6 +49,32 @@ in {
       winblend = 10;
     };
   };
+
+  colorschemes = {
+    catppuccin = {
+      enable = true;
+      settings = {
+        flavour = "macchiato";
+        transparent_background = true;
+        integrations = {
+          noice = true;
+          notify = true;
+          which_key = true;
+          bufferline = true;
+          ufo = true;
+          cmp = true;
+          nvimtree = true;
+          dashboard = true;
+          gitsigns = true;
+          telescope = true;
+          neotree = true;
+          treesitter = true;
+          treesitter_context = true;
+        };
+      };
+    };
+  };
+  colorscheme = "catppuccin";
 
   globalOpts.statusline = "%#Normal#";
   opts = {

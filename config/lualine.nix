@@ -1,123 +1,9 @@
-{ icons, ... }:
-let
-  themeColors = {
-    bg = "none";
-    fg = "#d2d2d2";
-    yellow = "#ECBE7B";
-    cyan = "#008080";
-    darkblue = "#081633";
-    green = "#98be65";
-    orange = "#FF8800";
-    violet = "#a9a1e1";
-    magenta = "#c678dd";
-    blue = "#51afef";
-    red = "#ec5f67";
-  };
-  colors = themeColors // {
-    bg = "#202328";
-    fg = "#bbc2cf";
-  };
-
-in {
+{ icons, ... }: {
   plugins.lualine = {
     enable = true;
-    settings.options = {
-      always_divide_middle = true;
-      icons_enabled = true;
-      theme = {
-        normal = {
-          a = {
-            fg = themeColors.bg;
-            bg = themeColors.blue;
-            gui = "bold";
-          };
-          b = {
-            inherit (themeColors) fg;
-            bg = themeColors.darkblue;
-          };
-          c = {
-            inherit (themeColors) fg;
-            inherit (themeColors) bg;
-          };
-        };
-        insert = {
-          a = {
-            fg = themeColors.bg;
-            bg = themeColors.green;
-            gui = "bold";
-          };
-          b = {
-            inherit (themeColors) fg;
-            bg = themeColors.darkblue;
-          };
-          c = {
-            inherit (themeColors) fg;
-            inherit (themeColors) bg;
-          };
-        };
-        visual = {
-          a = {
-            fg = themeColors.bg;
-            bg = themeColors.magenta;
-            gui = "bold";
-          };
-          b = {
-            inherit (themeColors) fg;
-            bg = themeColors.darkblue;
-          };
-          c = {
-            inherit (themeColors) fg;
-            inherit (themeColors) bg;
-          };
-        };
-        replace = {
-          a = {
-            fg = themeColors.bg;
-            bg = themeColors.red;
-            gui = "bold";
-          };
-          b = {
-            inherit (themeColors) fg;
-            bg = themeColors.darkblue;
-          };
-          c = {
-            inherit (themeColors) fg;
-            inherit (themeColors) bg;
-          };
-        };
-        command = {
-          a = {
-            fg = themeColors.bg;
-            bg = themeColors.orange;
-            gui = "bold";
-          };
-          b = {
-            inherit (themeColors) fg;
-            bg = themeColors.darkblue;
-          };
-          c = {
-            inherit (themeColors) fg;
-            inherit (themeColors) bg;
-          };
-        };
-        inactive = {
-          a = {
-            inherit (themeColors) fg;
-            inherit (themeColors) bg;
-            gui = "bold";
-          };
-          b = {
-            inherit (themeColors) fg;
-            inherit (themeColors) bg;
-          };
-          c = {
-            inherit (themeColors) fg;
-            inherit (themeColors) bg;
-          };
-        };
-      };
-
-    };
+    alwaysDivideMiddle = true;
+    theme = "catppuccin";
+    iconsEnabled = true;
   };
 
   extraConfigLua = ''
@@ -138,32 +24,6 @@ in {
 
     components.mode = {
       "mode",
-      color = function()
-        -- auto change color according to neovims mode{{{
-        local mode_color = {
-          n = "${colors.green}",
-          i = "${colors.blue}",
-          v = "${colors.magenta}",
-          [""] = "${colors.magenta}",
-          V = "${colors.magenta}",
-          c = "${colors.red}",
-          no = "${colors.red}",
-          s = "${colors.orange}",
-          S = "${colors.orange}",
-          [""] = "${colors.orange}",
-          ic = "${colors.yellow}",
-          R = "${colors.violet}",
-          Rv = "${colors.violet}",
-          cv = "${colors.red}",
-          ce = "${colors.red}",
-          r = "${colors.cyan}",
-          rm = "${colors.cyan}",
-          ["r?"] = "${colors.cyan}",
-          ["!"] = "${colors.red}",
-          t = "${colors.red}",
-        } -- }}}
-        return { bg = mode_color[vim.fn.mode()], fg = "#000000" }
-      end,
       fmt = function()
         return "${icons.misc.LualineFmt}"
       end,
