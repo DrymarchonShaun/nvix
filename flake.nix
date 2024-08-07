@@ -32,8 +32,7 @@
             } // import ./lib;
           };
           nvim = nixvim'.makeNixvimWithModule nixvimModule;
-        in
-        {
+        in {
           checks = {
             # Run `nix flake check .` to verify that your config is not broken
             default =
@@ -51,6 +50,9 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
+
+    # Nix Language Server
+    nil = { url = "github:oxalica/nil"; };
 
     tokyodark = {
       url = "github:tiagovla/tokyodark.nvim";
