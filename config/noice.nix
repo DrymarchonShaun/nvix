@@ -1,6 +1,5 @@
-{pkgs,mkKey,...}:
-let
-  inherit (mkKey) mkKeymap;
+{ pkgs, mkKey, ... }:
+let inherit (mkKey) mkKeymap;
 in {
   plugins.noice = {
     enable = true;
@@ -24,11 +23,11 @@ in {
     };
   };
   keymaps = [
-    (mkKeymap "n" "<leader>un" { __raw = "function () require('notify').dismiss() end"; } "Dismiss notification")
+    (mkKeymap "n" "<leader>un" {
+      __raw = "function () require('notify').dismiss() end";
+    } "Dismiss notification")
   ];
-  extraPlugins = with pkgs.vimPlugins; [
-    nvim-notify
-  ];
+  extraPlugins = with pkgs.vimPlugins; [ nvim-notify ];
   extraConfigLua = ''
     require('notify').setup({
       split = true,

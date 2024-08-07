@@ -1,6 +1,5 @@
-{opts,mkKey,...}:
-let
-  inherit (mkKey) mkKeymap;
+{ opts, mkKey, ... }:
+let inherit (mkKey) mkKeymap;
 in {
   plugins.nvim-ufo = {
     enable = true;
@@ -22,9 +21,16 @@ in {
     };
   };
   keymaps = [
-    (mkKeymap "n" "zR" { __raw = ''function() require("ufo").openAllFolds() end''; } "Open all folds" )
-    (mkKeymap "n" "zM" { __raw = ''function() require("ufo").closeAllFolds() end''; } "Close All Folds" )
-    (mkKeymap "n" "zK" { __raw = ''function() local winid = require("ufo").peekFoldedLinesUnderCursor() if not winid then vim.lsp.buf.hover() end end''; } "Peek Folded Lines" )
+    (mkKeymap "n" "zR" {
+      __raw = ''function() require("ufo").openAllFolds() end'';
+    } "Open all folds")
+    (mkKeymap "n" "zM" {
+      __raw = ''function() require("ufo").closeAllFolds() end'';
+    } "Close All Folds")
+    (mkKeymap "n" "zK" {
+      __raw = ''
+        function() local winid = require("ufo").peekFoldedLinesUnderCursor() if not winid then vim.lsp.buf.hover() end end'';
+    } "Peek Folded Lines")
   ];
   # Could have been done using `opts` but meh..
   extraConfigLua = ''
@@ -43,26 +49,15 @@ in {
       segments = [
         {
           click = "v:lua.ScFa";
-          text = [
-            {
-              __raw = "require('statuscol.builtin').foldfunc";
-            }
-          ];
+          text = [{ __raw = "require('statuscol.builtin').foldfunc"; }];
         }
         {
           click = "v:lua.ScSa";
-          text = [
-            " %s"
-          ];
+          text = [ " %s" ];
         }
         {
           click = "v:lua.ScLa";
-          text = [
-            {
-              __raw = "require('statuscol.builtin').lnumfunc";
-            }
-            " "
-          ];
+          text = [ { __raw = "require('statuscol.builtin').lnumfunc"; } " " ];
         }
       ];
     };

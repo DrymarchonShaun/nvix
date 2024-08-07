@@ -3,20 +3,13 @@
     lsp = {
       servers = {
         ruff.enable = true;
-      # ruff-lsp.enable = true;
+        # ruff-lsp.enable = true;
       };
     };
-    none-ls = {
-      sources = {
-        formatting.black.enable = true;
-        diagnostics = { mypy.enable = true; };
-      };
-    };
+    none-ls = { sources = { diagnostics = { mypy.enable = true; }; }; };
   };
 
-  extraPackages = with pkgs; [ 
-    sourcery
-  ];
+  extraPackages = with pkgs; [ sourcery ];
   # TODO: sops for token
   extraConfigLua = # lua
     ''

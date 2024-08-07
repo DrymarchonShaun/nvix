@@ -1,5 +1,4 @@
-{opts, ...}:
-{
+{ opts, ... }: {
   autoCmd = [
     {
       desc = "Highlight on yank";
@@ -44,7 +43,8 @@
     }
 
     {
-      desc = "Auto create dir when save file, in case some intermediate directory is missing";
+      desc =
+        "Auto create dir when save file, in case some intermediate directory is missing";
       event = [ "BufWritePre" ];
       callback = {
         __raw = ''

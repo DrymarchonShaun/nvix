@@ -7,21 +7,11 @@ in {
     settings = {
       current_line_blame = true;
       signs = {
-        add = {
-          text = "${icons.ui.LineLeft}";
-        };
-        change = {
-          text = "${icons.ui.LineLeft}";
-        };
-        delete = {
-          text = "${icons.ui.LineLeft}";
-        };
-        topdelete = {
-          text = "${icons.ui.Triangle}";
-        };
-        changedelete = {
-          text = "${icons.ui.BoldLineLeft}";
-        };
+        add = { text = "${icons.ui.LineLeft}"; };
+        change = { text = "${icons.ui.LineLeft}"; };
+        delete = { text = "${icons.ui.LineLeft}"; };
+        topdelete = { text = "${icons.ui.Triangle}"; };
+        changedelete = { text = "${icons.ui.BoldLineLeft}"; };
       };
     };
   };
