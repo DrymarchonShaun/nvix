@@ -33,22 +33,19 @@ let
 
     (mkKeymap "n" "<leader>q" "<cmd>quitall!<cr>" "Quit!")
 
-    (mkKeymap "n" "<leader><cr>"
-      {
-        __raw = ''
-          function()
-            local curdir = vim.fn.expand("%:p:h")
-            vim.api.nvim_set_current_dir(curdir)
-          end
-        '';
-      } "Change dir")
+    (mkKeymap "n" "<leader><cr>" {
+      __raw = ''
+        function()
+          local curdir = vim.fn.expand("%:p:h")
+          vim.api.nvim_set_current_dir(curdir)
+        end
+      '';
+    } "Change dir")
 
-    (mkKeymapWithOpts "n" "j" ''v:count || mode(1)[0:1] == "no" ? "j" : "gj"'' "Move down" {
-      expr = true;
-    })
-    (mkKeymapWithOpts "n" "k" ''v:count || mode(1)[0:1] == "no" ? "k" : "gk"'' "Move up" {
-      expr = true;
-    })
+    (mkKeymapWithOpts "n" "j" ''v:count || mode(1)[0:1] == "no" ? "j" : "gj"''
+      "Move down" { expr = true; })
+    (mkKeymapWithOpts "n" "k" ''v:count || mode(1)[0:1] == "no" ? "k" : "gk"''
+      "Move up" { expr = true; })
 
     (mkKeymap "n" "<leader>h" "<cmd>nohl<cr>" "No Highlight!")
     (mkKeymap "n" "<leader>a" "gg0vG$" "Select All")
@@ -64,20 +61,19 @@ let
     (mkKeymap "n" "<leader>tq" "<cmd>tabclose<cr>" "Close Tab")
     (mkKeymap "n" "<leader>tn" "<cmd>tabnew<cr>" "New Tab")
 
-    (mkKeymap "n" "<leader>ft"
-      {
-        __raw = ''
-          function()
-            vim.ui.input({ prompt = "Enter FileType: " }, function(input)
-              local ft = input
-              if not input or input == "" then
-                ft = vim.bo.filetype
-              end
-              vim.o.filetype = ft
-            end)
-          end
-        '';
-      } "Set Filetype")
+    (mkKeymap "n" "<leader>ft" {
+      __raw = ''
+        function()
+          vim.ui.input({ prompt = "Enter FileType: " }, function(input)
+            local ft = input
+            if not input or input == "" then
+              ft = vim.bo.filetype
+            end
+            vim.o.filetype = ft
+          end)
+        end
+      '';
+    } "Set Filetype")
 
     (mkKeymap "n" "n" "nzzzv" "Move to center")
     (mkKeymap "n" "N" "Nzzzv" "Moving to center")
@@ -108,15 +104,11 @@ let
 
   ];
   xv = [
-    (mkKeymapWithOpts "x" "j" ''v:count || mode(1)[0:1] == "no" ? "j" : "gj"'' "Move down" {
-      expr = true;
-    })
-    (mkKeymapWithOpts "x" "k" ''v:count || mode(1)[0:1] == "no" ? "k" : "gk"'' "Move up" {
-      expr = true;
-    })
-    (mkKeymap "x" "p" ''p:let @+=@0<CR>:let @"=@0<CR>'' "Dont copy replaced text")
+    (mkKeymapWithOpts "x" "j" ''v:count || mode(1)[0:1] == "no" ? "j" : "gj"''
+      "Move down" { expr = true; })
+    (mkKeymapWithOpts "x" "k" ''v:count || mode(1)[0:1] == "no" ? "k" : "gk"''
+      "Move up" { expr = true; })
+    (mkKeymap "x" "p" ''p:let @+=@0<CR>:let @"=@0<CR>''
+      "Dont copy replaced text")
   ];
-in
-{
-  keymaps = insert ++ normal ++ v ++ xv;
-}
+in { keymaps = insert ++ normal ++ v ++ xv; }
