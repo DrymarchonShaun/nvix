@@ -52,9 +52,6 @@
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
 
-    # Nix Language Server
-    nil = { url = "github:oxalica/nil"; };
-
     tokyodark = {
       url = "github:tiagovla/tokyodark.nvim";
       flake = false;
