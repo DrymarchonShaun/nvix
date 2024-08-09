@@ -20,7 +20,10 @@
     lsp.servers.nixd.enable = true;
     none-ls = {
       sources = {
-        formatting.nixfmt.enable = true;
+        formatting.nixfmt = {
+          enable = true;
+          package = pkgs.nixfmt-rfc-style;
+        };
         code_actions = { statix.enable = true; };
         diagnostics = {
           statix.enable = true;
