@@ -1,9 +1,14 @@
-{ icons, ... }: {
+{ icons, ... }:
+{
   plugins.lualine = {
     enable = true;
-    alwaysDivideMiddle = true;
-    theme = "catppuccin";
-    iconsEnabled = true;
+    settings = {
+      options = {
+        always_divide_middle = true;
+        theme = "catppuccin";
+        icons_enabled = true;
+      };
+    };
   };
 
   extraConfigLua = ''
