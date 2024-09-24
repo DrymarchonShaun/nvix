@@ -1,6 +1,8 @@
 { pkgs, opts, ... }:
-let inherit (pkgs) lib;
-in {
+let
+  inherit (pkgs) lib;
+in
+{
   # Import all your configuration modules here
   imports = [
     ./mappings.nix
@@ -18,6 +20,7 @@ in {
     ./treesitter.nix
     ./nvimtree.nix
     ./gitsigns.nix
+    ./web-devicons.nix
 
     ./dashboard.nix
     ./lsp.nix
@@ -118,7 +121,9 @@ in {
     fileencoding = "utf-8";
     list = true;
     smoothscroll = true;
-    fillchars = { eob = " "; };
+    fillchars = {
+      eob = " ";
+    };
 
     #interval for writing swap file to disk, also used by gitsigns
     updatetime = 550;

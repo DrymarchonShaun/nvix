@@ -1,4 +1,5 @@
-{ opts, ... }: {
+{ opts, ... }:
+{
   highlightOverride = {
     PMenu = {
       ctermbg = "none";
@@ -16,7 +17,9 @@
             border = "${opts.border}";
             scrollbar = false;
           };
-          documentation = { border = "${opts.border}"; };
+          documentation = {
+            border = "${opts.border}";
+          };
           snippet.expand = # lua
             ''
               function(args)
@@ -25,6 +28,7 @@
             '';
         };
         sources = [
+          { name = "cmp-nvim-lsp"; }
           { name = "async_path"; }
           { name = "nvim_lsp_signature_help"; }
           {
@@ -127,7 +131,9 @@
     cmp_luasnip.enable = true;
     cmp-nvim-lsp-signature-help.enable = true;
 
-    luasnip = { enable = true; };
+    luasnip = {
+      enable = true;
+    };
   };
   extraConfigLua = # lua
     ''
