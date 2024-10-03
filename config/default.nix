@@ -20,6 +20,7 @@ in
     ./treesitter.nix
     ./nvimtree.nix
     ./gitsigns.nix
+    ./neogit.nix
     ./web-devicons.nix
 
     ./dashboard.nix
