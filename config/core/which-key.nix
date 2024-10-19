@@ -5,7 +5,8 @@
       enable = true;
 
       settings = {
-        win.wo = { inherit (opts) winblend; };
+        # Breaks background color with catppuccin
+        # win.wo = { inherit (opts) winblend; };
         spec = config.wKeyList;
       };
     };
