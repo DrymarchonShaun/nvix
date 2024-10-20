@@ -31,7 +31,14 @@ in
     };
     lsp = {
       enable = true;
-      servers.typos_lsp.enable = true;
+      servers.typos_lsp = {
+        enable = true;
+        extraOptions = {
+          init_options = {
+            diagnosticSeverity = "Warning";
+        };
+        };
+          };
       keymaps = {
         silent = true;
         lspBuf = {
