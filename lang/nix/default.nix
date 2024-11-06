@@ -1,5 +1,11 @@
 { lib, pkgs, ... }:
 {
+  plugins = {
+    luasnip.fromLua = [
+      {
+        paths = ../nix;
+      }
+    ];
     # none-ls = {
     #   enable = mkDefault true;
     #   sources = {

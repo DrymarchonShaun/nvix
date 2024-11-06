@@ -1,5 +1,10 @@
 {
   plugins = {
+            luasnip.fromLua = [
+      {
+        paths = ../webdev;
+      }
+    ];
     ts-autotag.enable = true;
     ts-comments.enable = true;
     lsp.servers = {

@@ -8,7 +8,6 @@
   # colorschemes.rose-pine.enable = true;
   plugins = {
     lspkind.enable = true;
-    luasnip.enable = true;
 
     cmp_luasnip.enable = true;
 

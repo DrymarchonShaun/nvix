@@ -1,5 +1,11 @@
 {
-  plugins.lsp.servers = {
+  plugins = {
+            luasnip.fromLua = [
+      {
+        paths = ../python;
+      }
+    ];
+    lsp.servers = {
     ruff.enable = true;
     pyright = {
       enable = true;
@@ -7,6 +13,7 @@
         pyright.disableOrganizeImports = true;
         python.analysis.ignore = [ "*" ];
       };
+    };
     };
   };
 }

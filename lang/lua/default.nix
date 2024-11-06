@@ -1,5 +1,10 @@
 {
   plugins = {
+    luasnip.fromLua = [
+     {
+       paths = ../lua;
+     }
+   ];
     lsp.servers.lua_ls = {
       enable = true;
       settings.diagnostics = {
@@ -11,6 +16,7 @@
         ];
       };
     };
+
     conform-nvim.settings = {
       formatters_by_ft.lua = [ "stylua" ];
       formatters.stylua = {
