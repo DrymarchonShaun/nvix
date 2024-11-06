@@ -1,5 +1,8 @@
 { opts, lib, pkgs, ... }:
 {
+    wKeyList = [
+    (specObj [ "<leader>l" "󰿘" "lsp" ])
+  ];
   plugins = {
     otter.enable = true;
     conform-nvim = {
@@ -28,6 +31,7 @@
     };
     lsp = {
       enable = true;
+            inlayHints = true;
       servers.typos_lsp = {
         enable = true;
         extraOptions = {
@@ -63,6 +67,14 @@
       };
     };
   };
+
+  extraConfigLua = # lua
+    ''
+      vim.keymap.set("n", "<leader>lf", function() require("conform").format() end, { noremap = true, silent = true, desc = "Format Buffer" })
+      vim.keymap.set("v", "<leader>lf", function() require("conform").format() { async = true } end, { noremap = true, silent = true, desc = "Format Buffer" })
+      vim.keymap.set("x", "<leader>lf", function() require("conform").format() { async = true } end, { noremap = true, silent = true, desc = "Format Buffer" })
+
+    '';
 
   plugins.lsp.onAttach = # lua
     ''
