@@ -14,6 +14,11 @@
       flake = false;
     };
 
+    none-ls = {
+      url = "github:nvimtools/none-ls.nvim";
+      flake = false;
+    };
+
     typr = {
       url = "github:nvzone/typr";
       flake = false;
