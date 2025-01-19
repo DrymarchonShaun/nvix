@@ -27,11 +27,13 @@ in {
 
     fidget = {
       enable = true;
-      progress.display.progressIcon.pattern = "moon";
-      notification.window = {
-        relative = "editor";
-        winblend = 0;
-        border = "none";
+      settings = {
+        progress.display.progressIcon.pattern = "moon";
+        notification.window = {
+          relative = "editor";
+          winblend = 0;
+          border = "none";
+        };
       };
     };
   };
