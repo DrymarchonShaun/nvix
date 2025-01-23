@@ -24,6 +24,7 @@
           style = "nvchad";
         };
         neotree = true;
+        neogit = true;
         treesitter = true;
         mini.enabled = true;
         window_picker = true;
