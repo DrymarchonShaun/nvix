@@ -28,7 +28,6 @@ in {
     fidget = {
       enable = true;
       settings = {
-        progress.display.progressIcon.pattern = "moon";
         notification.window = {
           relative = "editor";
           winblend = 0;

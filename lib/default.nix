@@ -17,7 +17,7 @@
       };
   };
 
-  mkPkgs = name: src: pkgs.vimUtils.buildVimPlugin { inherit name src; };
+  mkPkgs = name: src: pkgs.vimUtils.buildVimPlugin { inherit name src; doCheck = false; };
 
   # For which-key icon generation
   # Accepts a list of strings and returns a list of objects

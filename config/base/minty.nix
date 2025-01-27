@@ -18,7 +18,7 @@ in {
   '';
 
   plugins.colorizer = {
-    enable = true;
+    enable = false;
     settings = {
       user_default_options = {
         css = true;
