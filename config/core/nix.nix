@@ -6,25 +6,12 @@ with lib;
 {
   plugins = {
     conform-nvim.enable = mkDefault true;
-    # none-ls = {
-    #   enable = mkDefault true;
-    #   sources = {
-    #     formatting.nix_flake_fmt = true;
-    #   };
-    # };
     lsp = {
       enable = mkDefault true;
       inlayHints = mkDefault true;
       servers.nixd = {
         enable = true;
-        extraOptions = {
-        offset_encoding = "utf-8";
-        };
       };
-      #servers.nil-ls = {
-      #  enable = true;
-      #  settings.formatting.command = [ "${lib.getExe pkgs.nixpkgs-fmt}" ];
-      #};
     };
   };
 
