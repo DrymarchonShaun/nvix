@@ -19,10 +19,19 @@
       modules = {
         ai = { };
         icons = { };
-        pairs = { };
+        # pairs = { };
         surround = { };
         operators = { };
         bufremove = { };
+      };
+    };
+    nvim-autopairs = {
+      enable = true;
+      settings = {
+        check_ts = true;
+        ts_config = {
+          lua = [ "string" "source" ];
+        };
       };
     };
     which-key = {
