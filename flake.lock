@@ -308,7 +308,24 @@
         "nixvim": "nixvim",
         "oil-lsp-diagnostics": "oil-lsp-diagnostics",
         "oil-vcs-status": "oil-vcs-status",
+        "sqf-vim": "sqf-vim",
         "tokyodark": "tokyodark"
+      }
+    },
+    "sqf-vim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1748478319,
+        "narHash": "sha256-sBNFnPOLDiiQmsZdytecums/lgHUa/2816hPmnELvzU=",
+        "owner": "DrymarchonShaun",
+        "repo": "vim-sqf",
+        "rev": "06ec4a9144ffbe320e3250e2ebae71ed50ab58f3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DrymarchonShaun",
+        "repo": "vim-sqf",
+        "type": "github"
       }
     },
     "systems": {

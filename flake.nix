@@ -31,6 +31,11 @@
       flake = false;
     };
 
+    sqf-vim = {
+      url = "github:DrymarchonShaun/vim-sqf";
+      flake = false;
+    };
+
     git-hooks-nix = {
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
