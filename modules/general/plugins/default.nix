@@ -5,7 +5,7 @@
   ...
 }:
 {
-  extraPlugins = with pkgs.vimPlugins; [ stay-centered-nvim ];
+  # extraPlugins = with pkgs.vimPlugins; [ stay-centered-nvim ];
   plugins = {
     # Must have plugins to have a decent flow of work
     tmux-navigator.enable = true;
@@ -30,7 +30,10 @@
       settings = {
         check_ts = true;
         ts_config = {
-          lua = [ "string" "source" ];
+          lua = [
+            "string"
+            "source"
+          ];
         };
       };
     };
