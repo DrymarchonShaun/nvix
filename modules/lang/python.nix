@@ -1,11 +1,12 @@
 {
   plugins.lsp.servers = {
     ruff.enable = true;
-    pyright = {
+    basedpyright = {
       enable = true;
       settings = {
-        pyright.disableOrganizeImports = true;
-        python.analysis.ignore = [ "*" ];
+        # basedpyright.typeCheckingMode = "basic";
+        basedpyright.typeCheckingMode = "recommended";
+
       };
     };
   };
