@@ -8,5 +8,5 @@
     # self.nvixModules.colorschemes
     self.nvixModules.snacks
   ];
-  colorscheme = "catppuccin";
+  # colorscheme = "catppuccin";
 }
