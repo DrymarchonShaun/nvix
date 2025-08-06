@@ -12,7 +12,7 @@
     self.nvixModules.dashboard
     self.nvixModules.aesthetics
     self.nvixModules.treesitter
-    self.nvixModules.colorschemes
+    # self.nvixModules.colorschemes
     self.nvixModules.auto-session
   ];
 }
