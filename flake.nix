@@ -21,6 +21,11 @@
       flake = false;
     };
 
+    tssorter = {
+      url = "github:mtrajano/tssorter.nvim";
+      flake = false;
+    };
+
     tokyodark = {
       url = "github:tiagovla/tokyodark.nvim";
       flake = false;

@@ -310,7 +310,8 @@
         "oil-lsp-diagnostics": "oil-lsp-diagnostics",
         "oil-vcs-status": "oil-vcs-status",
         "sqf-vim": "sqf-vim",
-        "tokyodark": "tokyodark"
+        "tokyodark": "tokyodark",
+        "tssorter": "tssorter"
       }
     },
     "sqf-vim": {
@@ -372,6 +373,22 @@
       "original": {
         "owner": "tiagovla",
         "repo": "tokyodark.nvim",
+        "type": "github"
+      }
+    },
+    "tssorter": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1723843417,
+        "narHash": "sha256-RN0DMF1tkJkQ5xRDiEV/yNr455K6Iw9cLxPA91ThxPg=",
+        "owner": "mtrajano",
+        "repo": "tssorter.nvim",
+        "rev": "74fa4102cb3272dcc8fd5696fd3240358f19c090",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mtrajano",
+        "repo": "tssorter.nvim",
         "type": "github"
       }
     }
