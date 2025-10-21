@@ -2,14 +2,17 @@
 {
   plugins = {
     lsp.servers = {
-      nil_ls = {
-        enable = true;
-      };
+      nixd.enable = true;
       statix.enable = true;
     };
-    conform-nvim.settings = {
-      formatters_by_ft.nix = ["nixfmt"];
-      formatters.nixfmt.command = lib.getExe pkgs.nixfmt-rfc-style;
+    none-ls = {
+      enable = true;
+      sources.formatting.nix_flake_fmt = {
+        enable = true;
+        settings = {
+          filetypes = [ "nix" ];
+        };
+      };
     };
   };
 }
