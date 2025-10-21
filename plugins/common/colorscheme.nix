@@ -2,7 +2,7 @@
 {
   colorschemes = {
     catppuccin = {
-      enable = true;
+      enable = false;
       settings = {
         integrations.native_lsp = {
           enabled = true;
