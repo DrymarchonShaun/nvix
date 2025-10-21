@@ -3,7 +3,6 @@ let
   inherit (config.nvix.mkKey) mkKeymap;
 in
 {
-  extraPlugins = with pkgs.vimPlugins; [ stay-centered-nvim ];
   plugins = {
     # Must have plugins to have a decent flow of work
     comment = {
