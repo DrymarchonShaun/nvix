@@ -138,12 +138,6 @@ let
 
     (mkKeymap "n" "n" "nzzzv" "Move to center")
     (mkKeymap "n" "N" "Nzzzv" "Moving to center")
-    (mkKeymap "n" "<leader>uC" (
-      # lua
-      mkRaw ''
-        require('stay-centered').toggle
-      ''
-    ) "Toggle stay-centered.nvim")
     (mkKeymap "n" "<leader>ft" (
       # lua
       mkRaw ''
