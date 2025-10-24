@@ -39,6 +39,7 @@ let
     # Productivity
     self.nvixPlugins.autosession
     self.nvixPlugins.ai
+    self.nvixPlugins.yazi
   ];
   fullModules = coreModules ++ [
     self.nvixPlugins.tex

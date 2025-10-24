@@ -26,15 +26,9 @@ in
       ""
       "file/find"
     ])
-    (wKeyObj [
-      "<leader>e"
-      "󰙅"
-      "Explorer"
-    ])
   ];
 
   keymaps = [
-    (mkKeymap "n" "<leader>e" "<cmd>:lua Snacks.explorer()<cr>" "Explorer")
     (mkKeymap "n" "<leader>.." "<cmd>:lua Snacks.scratch()<cr>" "Toggle Scratch Buffer")
     (mkKeymap "n" "<leader>.s" "<cmd>:lua Snacks.scratch.select()<cr>" "Select Scratch Buffer")
     (mkKeymap "n" "<leader>sn" "<cmd>:lua Snacks.notifier.show_history()<cr>" "Notification History")
