@@ -5,7 +5,12 @@
     ./devshell.nix
   ];
   perSystem =
-    { lib, system, ... }:
+    {
+      lib,
+      system,
+      pkgs,
+      ...
+    }:
     {
       # Make our overlay available to the devShell
       # "Flake parts does not yet come with an endorsed module that initializes the pkgs argument.""
@@ -18,6 +23,8 @@
           config.allowUnfree = true;
         };
       };
+
+      formatter = pkgs.nixfmt-tree;
 
       imports = [
         (self + /packages)

@@ -84,9 +84,9 @@ in
     (mkKeymap "n" "<leader>lD" "<cmd>:lua Snacks.picker.lsp_definitions()<cr>" "Definitions list")
     (mkKeymap "n" "<leader>ls" "<cmd>:lua Snacks.picker.lsp_symbols()<cr>" "Definitions list")
 
-    (mkKeymap "n" "<leader>lf" "<cmd>:lua require('conform').format()<cr>" "Format file")
-    (mkKeymap "x" "<leader>lf" "<cmd>:lua require('conform').format()<cr>" "Format File")
-    (mkKeymap "v" "<leader>lf" "<cmd>:lua require('conform').format()<cr>" "Format File")
+    (mkKeymap "n" "<leader>lf" "<cmd>lua vim.lsp.buf.format({ async = true })<CR>" "Format file")
+    (mkKeymap "x" "<leader>lf" "<cmd>lua vim.lsp.buf.format({ async = true })<CR>" "Format file")
+    (mkKeymap "v" "<leader>lf" "<cmd>lua vim.lsp.buf.format({ async = true })<CR>" "Format file")
 
     (mkKeymap "n" "[d" "<cmd>:lua vim.diagnostic.goto_prev()<cr>" "Previous Diagnostic")
     (mkKeymap "n" "]d" "<cmd>:lua vim.diagnostic.goto_next()<cr>" "Next Diagnostic")
